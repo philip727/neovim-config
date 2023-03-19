@@ -1,0 +1,5 @@
+require("modules.plugin_config.gruvbox")
+require("modules.plugin_config.lualine")
+require("modules.plugin_config.nvim-tree")
+require("modules.plugin_config.treesitter")
+require("modules.plugin_config.telescope")
