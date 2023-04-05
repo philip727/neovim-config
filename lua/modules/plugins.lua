@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
     -- Github integration
     use "lewis6991/gitsigns.nvim"
     use "tpope/vim-fugitive"
+    use "tpope/vim-rhubarb"
 
     if packer_bootstrap then
         require('packer').sync()
