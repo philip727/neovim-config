@@ -31,6 +31,9 @@ return require('packer').startup(function(use)
     use 'bcicen/vim-vice'
     use 'tomasiser/vim-code-dark'
     use 'sainnhe/edge'
+    use { 'catppuccin/nvim', as = "catppuccin" }
+    use { 'rose-pine/neovim', as = 'rose-pine' }
+    use 'folke/tokyonight.nvim'
 
     -- completion
     use 'hrsh7th/nvim-cmp'
@@ -38,13 +41,22 @@ return require('packer').startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'
-
+    -- Auto pair
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
     --lsp
     use {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     }
+    use {
+        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+        as = "lsp_lines",
+    }
+
     use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.0',

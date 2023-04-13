@@ -1,2 +1,2 @@
-vim.cmd("colorscheme codedark");
 vim.opt.termguicolors = true
+vim.cmd("colorscheme codedark");

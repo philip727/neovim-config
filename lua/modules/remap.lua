@@ -42,3 +42,5 @@ remap('i', '<Left>', '<Esc>:echo "use h instead, this"<CR>')
 remap('v', '<Down>', ':echo "use j instead, not this"<CR>')
 remap('n', '<Down>', ':echo "use j instead, not this"<CR>')
 remap('i', '<Down>', '<Esc>:echo "use j instead, this"<CR>')
+
+remap("", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
