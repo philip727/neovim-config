@@ -37,6 +37,15 @@ require("mason-lspconfig").setup_handlers({
                 }
             }
         })
+    end,
+    ['omnisharp'] = function ()
+        lspconfig.omnisharp.setup({
+            enable_editorconfig_support = true,
+
+
+
+
+        })
     end
 })
 

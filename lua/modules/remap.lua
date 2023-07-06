@@ -1,12 +1,7 @@
-local function remap(mode, new_key, command, opts)
-    opts = type(opts) == "table" and opts or {}
-
-    vim.keymap.set(mode, new_key, command, opts)
-end
-
+local remap = vim.keymap.set
 
 -- Clear highlights
-remap('n', '<leader>h', ':nohlsearch<CR>')
+remap('n', '<leader>c', ':nohlsearch<CR>')
 
 -- Format file
 remap('n', '<leader>f', vim.lsp.buf.format, {})
@@ -16,6 +11,8 @@ remap('n', '<C-s>', ':wa!<CR>')
 remap('v', '<C-s>', ':wa!<CR>')
 remap('i', '<C-s>', '<Esc>:wa!<CR>')
 
+remap('n', '<leader>w', '<C-w>w')
+remap('n', '<leader>W', '<C-w>W')
 
 -- Moving Line
 remap('v', "<M-k>", ":m '<-2<CR>gv=gv", { silent = true })
@@ -43,4 +40,14 @@ remap('v', '<Down>', ':echo "use j instead, not this"<CR>')
 remap('n', '<Down>', ':echo "use j instead, not this"<CR>')
 remap('i', '<Down>', '<Esc>:echo "use j instead, this"<CR>')
 
-remap("", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle lsp_lines" })
+-- Tabs
+remap('n', '<leader>n', ':tab split<CR>', { silent = true })
+remap('n', '<leader>x', ':tabclose<CR>', { silent = true })
+
+-- Switching tabs
+remap('n', '<leader>h', ':tabnext -<CR>', { silent = true })
+remap('n', '<leader>l', ':tabnext +<CR>', { silent = true })
+
+-- Moving tabs
+remap('n', '<leader><C-h>', ':tabmove -<CR>', { silent = true })
+remap('n', '<leader><C-l>', ':tabmove +<CR>', { silent = true })

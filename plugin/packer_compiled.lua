@@ -114,10 +114,13 @@ _G.packer_plugins = {
     path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
   },
-  lsp_lines = {
-    loaded = true,
-    path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lsp_lines",
-    url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+  ["lspsaga.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\flspsaga\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -138,6 +141,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["nightly.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nightly.nvim",
+    url = "https://github.com/Alexis12119/nightly.nvim"
   },
   ["noctis.nvim"] = {
     loaded = true,
@@ -201,6 +209,27 @@ _G.packer_plugins = {
     path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
+  ["space-vim-dark"] = {
+    loaded = true,
+    path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\space-vim-dark",
+    url = "https://github.com/liuchengxu/space-vim-dark"
+  },
+  ["startup.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fstartup\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\startup.nvim",
+    url = "https://github.com/startup-nvim/startup.nvim"
+  },
+  ["tabby.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tabby.nvim",
+    url = "https://github.com/nanozuki/tabby.nvim"
+  },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
@@ -210,6 +239,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
+  },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
   },
   ["vim-code-dark"] = {
     loaded = true,
@@ -230,18 +264,39 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-vice",
     url = "https://github.com/bcicen/vim-vice"
+  },
+  ["wilder.nvim"] = {
+    config = { "\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0" },
+    loaded = true,
+    path = "C:\\Users\\phils\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\wilder.nvim",
+    url = "https://github.com/gelguy/wilder.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: poimandres.nvim
 time([[Config for poimandres.nvim]], true)
 try_loadstring("\27LJ\2\n<\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\15poimandres\frequire\0", "config", "poimandres.nvim")
 time([[Config for poimandres.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: startup.nvim
+time([[Config for startup.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fstartup\frequire\0", "config", "startup.nvim")
+time([[Config for startup.nvim]], false)
+-- Config for: wilder.nvim
+time([[Config for wilder.nvim]], true)
+try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "wilder.nvim")
+time([[Config for wilder.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au LspAttach * ++once lua require("packer.load")({'lspsaga.nvim'}, { event = "LspAttach *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

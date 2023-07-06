@@ -13,13 +13,30 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'nvim-tree/nvim-tree.lua'
+
+    -- Appearance
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'norcalli/nvim-colorizer.lua'
+    use "xiyaowong/transparent.nvim"
+    use 'nanozuki/tabby.nvim'
 
-    -- themes
+    -- File browsing
+    use 'nvim-tree/nvim-tree.lua'
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
+    use {
+        "startup-nvim/startup.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+        config = function()
+            require "startup".setup()
+        end
+    }
+
+    -- Themes
     use 'ellisonleao/gruvbox.nvim'
     use {
         'olivercederborg/poimandres.nvim',
@@ -34,34 +51,54 @@ return require('packer').startup(function(use)
     use { 'catppuccin/nvim', as = "catppuccin" }
     use { 'rose-pine/neovim', as = 'rose-pine' }
     use 'folke/tokyonight.nvim'
+    use 'liuchengxu/space-vim-dark'
+    use "Alexis12119/nightly.nvim"
 
-    -- completion
+
+    -- Completion
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
     use 'rafamadriz/friendly-snippets'
+    use({
+        "glepnir/lspsaga.nvim",
+        opt = true,
+        branch = "main",
+        event = "LspAttach",
+        config = function()
+            require("lspsaga").setup {};
+        end,
+        requires = {
+            { "nvim-tree/nvim-web-devicons" },
+            { "nvim-treesitter/nvim-treesitter" }
+        }
+    })
+    use {
+        'gelguy/wilder.nvim',
+        config = function()
+            -- config goes here
+        end,
+    }
+
     -- Auto pair
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-    --lsp
+
+    --LSP
     use {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     }
     use {
-        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-        as = "lsp_lines",
-    }
-
-    use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.0',
         requires = { { 'nvim-lua/plenary.nvim' } },
     }
+
 
     -- Github integration
     use "lewis6991/gitsigns.nvim"
