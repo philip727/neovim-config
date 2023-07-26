@@ -10,6 +10,7 @@ require("modules.plugin_config.lsp_saga")
 require("modules.plugin_config.autopairs")
 require("modules.plugin_config.wilder")
 require("modules.plugin_config.tabby")
+require("modules.plugin_config.context")
 
 -- Themes
 require("modules.plugin_config.themes.catppuccin")

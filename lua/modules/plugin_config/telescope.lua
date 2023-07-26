@@ -1,8 +1,8 @@
 local telescope = require("telescope")
 local builtin = require('telescope.builtin')
 local actions = require('telescope.actions')
-local fb_actions = telescope.extensions.file_browser.actions;
 local STARTING_DIRECTORY = "D:/Programming";
+local fb_actions = telescope.extensions.file_browser.actions;
 
 -- Define the function for setting the NvimTree root directory
 local function set_telescope_root(prompt_bufnr)
@@ -22,7 +22,9 @@ telescope.setup {
     extensions = {
         file_browser = {
             -- disables netrw and use telescope-file-browser in its place
+
             hijack_netrw = true,
+
             mappings = {
                 ["i"] = {
                     -- your custom insert mode mappings

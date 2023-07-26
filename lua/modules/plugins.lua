@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-lualine/lualine.nvim'
     use 'nvim-treesitter/nvim-treesitter'
+    use 'nvim-treesitter/nvim-treesitter-context'
     use 'norcalli/nvim-colorizer.lua'
     use "xiyaowong/transparent.nvim"
     use 'nanozuki/tabby.nvim'
