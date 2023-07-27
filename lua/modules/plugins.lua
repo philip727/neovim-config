@@ -50,5 +50,10 @@ require("lazy").setup {
             "nvim-tree/nvim-web-devicons",
             "nvim-treesitter/nvim-treesitter",
         }
-    }
+    },
+
+    -- Git
+    "lewis6991/gitsigns.nvim",
+    "tpope/vim-fugitive",
+    "tpope/vim-rhubarb",
 }
