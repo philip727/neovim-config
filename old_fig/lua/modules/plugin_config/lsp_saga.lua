@@ -2,14 +2,13 @@ vim.diagnostic.config {
     virtual_text = true,
 }
 
-require "lspsaga".setup{}
-
 local remap = vim.keymap.set
 
 remap({ "n", "v" }, '<leader>ca', '<cmd>Lspsaga code_action<CR>', { silent = true })
 
 remap('n', "<leader>r", "<cmd>Lspsaga rename<CR>", { silent = true })
 remap('n', "<leader>r", "<cmd>Lspsaga rename ++project<CR>", { silent = true })
+
 
 -- Peek definition
 -- Use <C-t> to jump back
@@ -46,3 +45,6 @@ remap("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>")
 -- To disable it just use ":Lspsaga hover_doc ++quiet"
 -- Pressing the key twice will enter the hover window
 remap("n", "K", "<cmd>Lspsaga hover_doc<CR>")
+--
+-- Floating terminal
+remap({ "n", "t" }, "<leader>t", "<cmd>Lspsaga term_toggle<CR>")
