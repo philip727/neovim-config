@@ -7,7 +7,6 @@ require("mason-lspconfig").setup({
 local lspconfig = require("lspconfig")
 
 local on_attach = function(_, _)
-
     vim.api.nvim_exec_autocmds('User', { pattern = 'LspAttached' })
 end
 

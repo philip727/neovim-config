@@ -37,4 +37,6 @@ remap('n', '<leader><C-h>', ':tabmove -<CR>', { silent = true })
 remap('n', '<leader><C-l>', ':tabmove +<CR>', { silent = true })
 
 -- NetRW
-remap('n', '<leader>e', ':Ex<CR>', { silent = true})
+remap('n', '<leader>e', ':Ex<CR>', { silent = true })
+
+remap('n', '<leader>cd', [[:cd %:p:h<CR>:pwd<CR>]], { noremap = true })
