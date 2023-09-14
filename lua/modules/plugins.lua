@@ -19,6 +19,7 @@ require("lazy").setup {
     "nvim-lualine/lualine.nvim",
     "nvim-treesitter/nvim-treesitter",
     "nvim-treesitter/nvim-treesitter-context",
+    'nanozuki/tabby.nvim',
 
     -- Completion
     "hrsh7th/cmp-nvim-lsp",

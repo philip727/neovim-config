@@ -25,18 +25,21 @@ remap('i', "<M-k>", "<Esc>:m .-2<CR>==gi", { silent = true })
 remap('i', "<M-j", "<Esc>:m .+1<CR>==gi", { silent = true })
 
 -- Tabs
-remap('n', '<leader>n', ':tab split<CR>', { silent = true })
-remap('n', '<leader>x', ':tabclose<CR>', { silent = true })
+remap('n', '<leader>tn', ':tab split<CR>', { silent = true })
+remap('n', '<leader>tx', ':tabclose<CR>', { silent = true })
 
 -- Switching tabs
-remap('n', '<leader>h', ':tabnext -<CR>', { silent = true })
-remap('n', '<leader>l', ':tabnext +<CR>', { silent = true })
+remap('n', '<leader>th', ':tabnext -<CR>', { silent = true })
+remap('n', '<leader>tl', ':tabnext +<CR>', { silent = true })
 
 -- Moving tabs
 remap('n', '<leader><C-h>', ':tabmove -<CR>', { silent = true })
 remap('n', '<leader><C-l>', ':tabmove +<CR>', { silent = true })
 
+remap('n', '<leader>Q', ':q<CR>', { silent = true })
+
 -- NetRW
 remap('n', '<leader>e', ':Ex<CR>', { silent = true })
 
 remap('n', '<leader>cd', [[:cd %:p:h<CR>:pwd<CR>]], { noremap = true })
+
