@@ -2,7 +2,10 @@ local telescope = require("telescope")
 local builtin = require('telescope.builtin')
 local actions = require('telescope.actions')
 
-telescope.setup {}
+telescope.setup {
+
+}
+
 -- Bind keys to Telescope functions
 vim.keymap.set('n', "<C-f>", builtin.find_files, {})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})

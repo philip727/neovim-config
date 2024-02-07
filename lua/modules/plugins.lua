@@ -11,15 +11,15 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup {
+require("lazy").setup({
     -- Appearance
-
-    'nvim-tree/nvim-web-devicons',
+    "nvim-tree/nvim-web-devicons",
     { "catppuccin/nvim", name = "catpuccin" },
     "nvim-lualine/lualine.nvim",
     "nvim-treesitter/nvim-treesitter",
     "nvim-treesitter/nvim-treesitter-context",
-    'nanozuki/tabby.nvim',
+    "nanozuki/tabby.nvim",
+
 
     -- Completion
     "hrsh7th/cmp-nvim-lsp",
@@ -31,7 +31,7 @@ require("lazy").setup {
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.2",
-        dependencies = { "nvim-lua/plenary.nvim" }
+        dependencies = { "nvim-lua/plenary.nvim" },
     },
 
     "gelguy/wilder.nvim",
@@ -43,13 +43,26 @@ require("lazy").setup {
     {
         "nvimdev/lspsaga.nvim",
         config = function()
-            require "lspsaga".setup {}
+            require("lspsaga").setup({})
         end,
         branch = "main",
         event = "LspAttach",
         dependencies = {
             "nvim-tree/nvim-web-devicons",
             "nvim-treesitter/nvim-treesitter",
+        },
+    },
+
+
+    -- Tree
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
         }
     },
 
@@ -57,4 +70,4 @@ require("lazy").setup {
     "lewis6991/gitsigns.nvim",
     "tpope/vim-fugitive",
     "tpope/vim-rhubarb",
-}
+})
