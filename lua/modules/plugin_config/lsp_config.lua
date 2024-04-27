@@ -4,6 +4,13 @@ require("mason-lspconfig").setup({
         "jsonls", "luau_lsp" }
 })
 
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+    pattern = "*.wgsl",
+    callback = function()
+        vim.bo.filetype = "wgsl"
+    end
+})
+
 local lspconfig = require("lspconfig")
 
 local on_attach = function(_, _)
@@ -45,4 +52,8 @@ lspconfig.lua_ls.setup {
             },
         },
     },
+}
+
+lspconfig.wgsl_analyzer.setup {
+    on_attach = on_attach,
 }

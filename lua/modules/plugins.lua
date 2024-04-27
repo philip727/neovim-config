@@ -14,11 +14,17 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- Appearance
     "nvim-tree/nvim-web-devicons",
-    { "catppuccin/nvim", name = "catpuccin" },
     "nvim-lualine/lualine.nvim",
     "nvim-treesitter/nvim-treesitter",
     "nvim-treesitter/nvim-treesitter-context",
     "nanozuki/tabby.nvim",
+
+    -- Installed themes
+    { "catppuccin/nvim",          name = "catpuccin" },
+    'NTBBloodbath/doom-one.nvim',
+    { "ellisonleao/gruvbox.nvim", priority = 1000,   config = true, opts = ... },
+    "bluz71/vim-nightfly-colors",
+    "joshdick/onedark.vim",
 
 
     -- Completion
