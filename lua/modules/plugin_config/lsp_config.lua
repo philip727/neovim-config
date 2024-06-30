@@ -41,6 +41,20 @@ require("mason-lspconfig").setup_handlers({
         lspconfig.omnisharp.setup({
             enable_editorconfig_support = true,
         })
+    end,
+    ["rust_analyzer"] = function()
+        lspconfig.rust_analyzer.setup({
+            settings = {
+                ["rust-analyzer"] = {
+                    cargo = {
+                        targetDir = true,
+                        buildScripts = {
+                            rebuildOnSave = false,
+                        }
+                    }
+                }
+            }
+        })
     end
 })
 

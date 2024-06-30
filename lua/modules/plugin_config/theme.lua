@@ -3,9 +3,10 @@
 --    transparent_background = false,
 --})
 
---vim.cmd("colorscheme catppuccin");
+vim.cmd("colorscheme atlas");
+--vim.cmd("colorscheme alabaster");
 --vim.cmd("colorscheme doom-one")
-vim.cmd("colorscheme gruvbox")
+--vim.cmd("colorscheme gruvbox")
 --vim.o.background = "dark"
 --vim.cmd("colorscheme onedark")
 

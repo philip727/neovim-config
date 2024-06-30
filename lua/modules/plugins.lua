@@ -18,6 +18,10 @@ require("lazy").setup({
     "nvim-treesitter/nvim-treesitter",
     "nvim-treesitter/nvim-treesitter-context",
     "nanozuki/tabby.nvim",
+    "p00f/alabaster.nvim",
+    'huyvohcmc/atlas.vim',
+    'ntk148v/komau.vim',
+    'pbrisbin/vim-colors-off',
 
     -- Installed themes
     { "catppuccin/nvim",          name = "catpuccin" },
