@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "tsserver", "rust_analyzer", "tailwindcss", "quick_lint_js", "cssls", "html",
+    ensure_installed = { "lua_ls", "tsserver", "rust_analyzer@nightly", "tailwindcss", "quick_lint_js", "cssls", "html",
         "jsonls", "luau_lsp" }
 })
 
@@ -44,14 +44,30 @@ require("mason-lspconfig").setup_handlers({
     end,
     ["rust_analyzer"] = function()
         lspconfig.rust_analyzer.setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
             settings = {
                 ["rust-analyzer"] = {
                     cargo = {
                         targetDir = true,
-                        buildScripts = {
-                            rebuildOnSave = false,
-                        }
-                    }
+                        allFeatures = true,
+                        loadOutDirsFromCheck = true,
+                        runBuildScripts = true,
+                    },
+                    -- Add clippy lints for Rust.
+                    checkOnSave = {
+                        allFeatures = true,
+                        command = "clippy",
+                        extraArgs = { "--no-deps" },
+                    },
+                    procMacro = {
+                        enable = true,
+                        ignored = {
+                            ["async-trait"] = { "async_trait" },
+                            ["napi-derive"] = { "napi" },
+                            ["async-recursion"] = { "async_recursion" },
+                        },
+                    },
                 }
             }
         })
