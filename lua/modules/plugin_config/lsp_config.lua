@@ -4,6 +4,7 @@ require("mason-lspconfig").setup({
         "jsonls", "luau_lsp" }
 })
 
+
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
     pattern = "*.wgsl",
     callback = function()
@@ -13,13 +14,22 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 
 local lspconfig = require("lspconfig")
 
-local on_attach = function(_, _)
+--lspconfig.dartls.setup {
+--    cmd = { "dart", "language-server", "--protocol=lsp" },
+--}
+
+local on_attach = function(_, bufnr)
     vim.api.nvim_exec_autocmds('User', { pattern = 'LspAttached' })
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local lsp_defaults = {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
+require("flutter-tools").setup {
     on_attach = on_attach,
     capabilities = capabilities,
 }

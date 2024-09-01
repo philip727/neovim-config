@@ -17,11 +17,21 @@ require("lazy").setup({
     "nvim-lualine/lualine.nvim",
     "nvim-treesitter/nvim-treesitter",
     "nvim-treesitter/nvim-treesitter-context",
+    "xiyaowong/transparent.nvim",
     "nanozuki/tabby.nvim",
     "p00f/alabaster.nvim",
     'huyvohcmc/atlas.vim',
     'ntk148v/komau.vim',
     'pbrisbin/vim-colors-off',
+    {
+        'akinsho/flutter-tools.nvim',
+        lazy = false,
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+        config = true,
+    },
 
     -- Installed themes
     { "catppuccin/nvim",          name = "catpuccin" },
@@ -29,6 +39,7 @@ require("lazy").setup({
     { "ellisonleao/gruvbox.nvim", priority = 1000,   config = true, opts = ... },
     "bluz71/vim-nightfly-colors",
     "joshdick/onedark.vim",
+    "rose-pine/neovim",
 
 
     -- Completion
