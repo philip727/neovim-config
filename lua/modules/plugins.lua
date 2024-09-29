@@ -40,6 +40,13 @@ require("lazy").setup({
     "bluz71/vim-nightfly-colors",
     "joshdick/onedark.vim",
     "rose-pine/neovim",
+    'sainnhe/everforest',
+    "rebelot/kanagawa.nvim",
+    "diegoulloao/neofusion.nvim",
+    "ray-x/aurora",
+    "embark-theme/vim",
+    "Mofiqul/vscode.nvim",
+
 
 
     -- Completion
