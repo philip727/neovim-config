@@ -6,10 +6,10 @@
 --vim.cmd("colorscheme catppuccin");
 --vim.cmd("colorscheme atlas");
 --vim.cmd("colorscheme alabaster");
---vim.cmd("colorscheme doom-one")
+vim.cmd("colorscheme doom-one")
 --vim.cmd("colorscheme gruvbox")
 --vim.o.background = "dark"
 --vim.cmd("colorscheme onedark")
 --vim.cmd("colorscheme rose-pine")
 --vim.cmd("colorscheme everforest")
-vim.cmd("colorscheme embark")
+--vim.cmd("colorscheme embark")
