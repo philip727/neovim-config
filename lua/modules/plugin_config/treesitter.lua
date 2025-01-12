@@ -11,9 +11,9 @@ require 'nvim-treesitter.configs'.setup {
     sync_install = false,
     auto_install = true,
     highlight = {
-        --enable = true,
-        --additional_vim_regex_highlighting = { "markdown" },
+        enable = true,
+        additional_vim_regex_highlighting = { "markdown" },
 
-        disable = { "c", "rust" }
+        --disable = { "c", "rust" }
     },
 }

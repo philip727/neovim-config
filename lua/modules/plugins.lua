@@ -46,6 +46,7 @@ require("lazy").setup({
     "ray-x/aurora",
     "embark-theme/vim",
     "Mofiqul/vscode.nvim",
+    'shaunsingh/nord.nvim',
 
     -- install with yarn or npm
     {
