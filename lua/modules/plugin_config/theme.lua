@@ -3,6 +3,7 @@
 --    transparent_background = false,
 --})
 --
+vim.cmd("colorscheme vscode");
 --vim.cmd("colorscheme catppuccin");
 --vim.cmd("colorscheme atlas");
 --vim.cmd("colorscheme alabaster");
