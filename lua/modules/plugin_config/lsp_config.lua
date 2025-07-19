@@ -18,7 +18,7 @@ local lspconfig = require("lspconfig")
 --    cmd = { "dart", "language-server", "--protocol=lsp" },
 --}
 
-local on_attach = function(_, bufnr)
+local on_attach = function(_, _bufnr)
     vim.api.nvim_exec_autocmds('User', { pattern = 'LspAttached' })
 end
 
