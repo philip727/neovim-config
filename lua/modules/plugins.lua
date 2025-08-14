@@ -123,4 +123,7 @@ require("lazy").setup({
     "lewis6991/gitsigns.nvim",
     "tpope/vim-fugitive",
     "tpope/vim-rhubarb",
+
+    -- Copilot
+    'github/copilot.vim',
 })
