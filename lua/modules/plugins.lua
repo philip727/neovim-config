@@ -50,6 +50,16 @@ require("lazy").setup({
     'craftzdog/solarized-osaka.nvim',
     'projekt0n/github-nvim-theme',
     'sainnhe/sonokai',
+    'marko-cerovac/material.nvim',
+    'junegunn/seoul256.vim',
+    'datsfilipe/min-theme.nvim',
+    'b0o/lavi.nvim',
+    'oneslash/helix-nvim',
+    'comfysage/aki',
+    'kvrohit/rasmus.nvim',
+    'ronxvier/ymir.nvim',
+    'binbandit/aetherglow.nvim',
+    'tourcoder/larn.nvim',
 
 
     -- install with yarn or npm
