@@ -47,6 +47,10 @@ require("lazy").setup({
     "embark-theme/vim",
     "Mofiqul/vscode.nvim",
     'shaunsingh/nord.nvim',
+    'craftzdog/solarized-osaka.nvim',
+    'projekt0n/github-nvim-theme',
+    'sainnhe/sonokai',
+
 
     -- install with yarn or npm
     {
