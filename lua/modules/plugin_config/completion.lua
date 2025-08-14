@@ -9,9 +9,9 @@ cmp.setup({
         ['<C-o>'] = cmp.mapping.complete(),
         ['<Esc>'] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
-        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
-        ['<S-j>'] = cmp.mapping.select_next_item({behaviour = cmp.SelectBehavior.Insert}),
-        ['<S-k>'] = cmp.mapping.select_prev_item({behaviour = cmp.SelectBehavior.Insert})
+        ['<C-Tab>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-j>'] = cmp.mapping.select_next_item({behaviour = cmp.SelectBehavior.Insert}),
+        ['<C-k>'] = cmp.mapping.select_prev_item({behaviour = cmp.SelectBehavior.Insert})
     }),
     snippet = {
         expand = function(args)
