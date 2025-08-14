@@ -14,4 +14,6 @@
 --vim.cmd("colorscheme rose-pine")
 --vim.cmd("colorscheme everforest")
 --vim.cmd("colorscheme embark")
-vim.cmd("colorscheme catppuccin-frappe")
+--vim.cmd("colorscheme catppuccin-frappe")
+vim.cmd("colorscheme ymir")
+
