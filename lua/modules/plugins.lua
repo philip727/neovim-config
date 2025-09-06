@@ -60,6 +60,7 @@ require("lazy").setup({
     'ronxvier/ymir.nvim',
     'binbandit/aetherglow.nvim',
     'tourcoder/larn.nvim',
+    "olimorris/onedarkpro.nvim",
 
 
     -- install with yarn or npm
@@ -124,6 +125,20 @@ require("lazy").setup({
     "tpope/vim-fugitive",
     "tpope/vim-rhubarb",
 
+    "loctvl842/monokai-pro.nvim",
+
+    "vague2k/vague.nvim",
+    "savq/melange-nvim",
+    'rktjmp/lush.nvim',
+    "jacoborus/tender.vim",
+    "nyoom-engineering/oxocarbon.nvim",
+    "nyoom-engineering/nyoom.nvim",
+    "rmehri01/onenord.nvim",
+    "Shatur/neovim-ayu",
+    "everviolet/nvim",
+    "dgox16/oldworld.nvim",
+    "ramojus/mellifluous.nvim",
+    "mellow-theme/mellow.nvim",
     -- Copilot
-    'github/copilot.vim',
+    --'github/copilot.vim',
 })
