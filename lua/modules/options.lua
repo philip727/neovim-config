@@ -28,3 +28,10 @@ vim.g.mapleader = " "
 vim.wo.signcolumn = "yes"
 
 vim.o.showtabline = 2
+
+vim.opt.autoread = true
+
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+    command = "checktime"
+})
+

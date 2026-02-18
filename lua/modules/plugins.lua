@@ -32,6 +32,24 @@ require("lazy").setup({
         },
         config = true,
     },
+    {
+        "j-hui/fidget.nvim",
+        opts = {
+            -- options
+        },
+    },
+    {
+        "folke/trouble.nvim",
+        opts = {}, -- for default options, refer to the configuration section for custom setup.
+        cmd = "Trouble",
+        keys = {
+            {
+                "<leader>xx",
+                "<cmd>Trouble diagnostics toggle<cr>",
+                desc = "Diagnostics (Trouble)",
+            }
+        }
+    },
 
     -- Installed themes
     { "catppuccin/nvim",          name = "catpuccin" },
@@ -61,6 +79,14 @@ require("lazy").setup({
     'binbandit/aetherglow.nvim',
     'tourcoder/larn.nvim',
     "olimorris/onedarkpro.nvim",
+    {
+      url = "https://codeberg.org/jthvai/lavender.nvim",
+      branch = "stable", -- versioned tags + docs updates from main
+      lazy = false,
+      priority = 1000,
+    },
+    "atelierbram/Base2Tone-nvim",
+
 
 
     -- install with yarn or npm

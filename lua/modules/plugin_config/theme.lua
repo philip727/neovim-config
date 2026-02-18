@@ -16,5 +16,6 @@
 --vim.cmd("colorscheme embark")
 --vim.cmd("colorscheme catppuccin-frappe")
 --vim.cmd("colorscheme ymir")
-vim.cmd("colorscheme ayu-mirage")
+--vim.cmd("colorscheme ayu-mirage")
 --vim.cmd("colorscheme evergarden-fall")
+vim.cmd("colorscheme vscode")
